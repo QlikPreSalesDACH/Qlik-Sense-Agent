@@ -49,6 +49,21 @@ Local copys of corporate data create huge compliance issue
  
 ----------
 
+#### **Where do I find documentation?**
+
+The documentation for Qlik Data Concierge will be maintained through the internal WIKI section of this repository.
+
+- [Go to documentation](https://github.com/QlikPreSalesDACH/Qlik-Sense-Agent/wiki)
+
+----------
+
+#### **Implementation**
+ **I like to implement the solution in a production environment. Where can I get assistance from?**
+ 
+ *Please contact Qlik Consulting Services to gain help in your project.*
+ 
+----------
+
 "Look and Feel":
 ![QSA](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Sense-Agent/master/docs/img/1.png)
 
