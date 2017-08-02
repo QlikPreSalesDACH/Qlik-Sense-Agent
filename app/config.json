@@ -1,0 +1,17 @@
+{
+  "config": {
+    "general": {
+      "appid": "Please insert your AppID"
+    },
+    "source": {
+      "host": "Please insert your hostname",
+      "isSecure": "https://",
+      "port": "443",
+      "prefix": "/"
+    },
+    "gms": {
+      "usage": "true",
+      "cpname": "Please insert your CustomProperty Name e.g. ManagedMasterItems"
+    }
+  }
+}

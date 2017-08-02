@@ -1,0 +1,1119 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
+:focus {
+    outline: none !important;
+}
+
+body {
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.panel-heading {
+    height: 80px !important;
+}
+* {
+ font-size: 100%;
+ font-weight: 500;
+ font-family: "Lato";
+}
+
+.logo > img {
+    max-height: 55px;
+    position:absolute;
+    top: 20px;
+    right: calc(50% - 60px);
+    left: calc(50% - 60px);
+    display:inline-block;
+    z-index: -3;
+}
+
+.logo {
+    padding:50px;
+}
+
+.deco1 {
+  max-height: 300px;
+  float: right;
+  right: 0px;
+  top: -130px;
+  position: absolute;
+  z-index: -4;
+}
+
+.deco2 {
+  max-height: 150px;
+  float: right;
+  left: 120px;
+  top: 10px;
+  position: absolute;
+  z-index: -5;
+}
+
+.header {
+    position:fixed;
+    top: 0px;
+	background: #636363;
+	padding-top: 30px;
+	padding-bottom: 1px;
+}
+
+.sense-search-input-container {
+
+	max-width: 800px !important;
+	display: block;
+ 	margin-left: auto;
+ 	margin-right: auto;
+}
+
+/* SearchBox */
+input::-ms-clear {
+    display: none;
+}
+
+input[type="text"] {
+  height: 40px;
+  font-size: 20px;
+  display: inline-block;
+  font-family: "Lato";
+  font-weight: 500;
+  border: none;
+	border-bottom: 1px solid #636363;;
+  outline: none;
+  color: #a9a9a4;
+  padding: 0px;
+	margin: 0px;
+  padding-right: 40px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  background-image: none;
+  z-index: 3;
+  transition: border-color 2s ease;
+  cursor: pointer;
+}
+
+input[type="text"]:hover ~ button[type="button"].sense-search-input-clear{
+  border-color: #BBB;
+  background: url("../img/Q_white_n.png") center center no-repeat;
+  background-size: 28px 28px;
+}
+
+input[type="text"]:focus ~ button[type="button"].sense-search-input-clear{
+  border-color: #BBB;
+  background: url("../img/Q_white_n.png") center center no-repeat;
+  background-size: 28px 28px;
+}
+
+input[type="text"]:focus {
+  width: 100%;
+  z-index: 1;
+  border-bottom: 1px solid #BBB;
+  cursor: text;
+}
+button[type="button"].sense-search-input-clear {
+  height: 38px;
+  width: 38px;
+  display: inline-block;
+  color:red;
+  float: right;
+  background: url("../img/Q_white.png") center center no-repeat;
+  background-size: 28px 28px;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity .4s ease;
+}
+
+button[type="button"].sense-search-input-clear :hover{
+  opacity: 1;
+}
+
+/* Seperator */
+HTML  CSS   Result
+Edit on
+body {background:#ccc}
+
+.box h3{
+  text-align:center;
+    position:relative;
+    top:80px;
+}
+.box {
+    width:70%;
+    height:200px;
+    background:#FFF;
+    margin:40px auto;
+}
+/*==================================================
+ * Effect 1
+ * ===============================================*/
+.effect1{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==================================================
+ * Effect 3
+ * ===============================================*/
+.effect3
+{
+  position: relative;
+}
+.effect3:before
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+/*==================================================
+ * Effect 4
+ * ===============================================*/
+.effect4
+{
+  position: relative;
+}
+.effect4:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  right: 10px;
+  left: auto;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+
+/*==================================================
+ * Effect 5
+ * ===============================================*/
+.effect5
+{
+  position: relative;
+}
+.effect5:before, .effect5:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.effect5:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==================================================
+ * Effect 6
+ * ===============================================*/
+.effect6
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect6:before, .effect6:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect6:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+/*==================================================
+ * Effect 7
+ * ===============================================*/
+.effect7
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before, .effect7:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect7:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+/*==================================================
+ * Effect 8
+ * ===============================================*/
+.effect8
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+/* Cards */
+
+.dropdown-menu:before {
+  position: absolute;
+  top: -7px;
+  left: 5px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgb(248, 150, 30);
+  content: '';
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal; 
+    line-height: 2;
+    color: #333;
+    white-space: nowrap;
+}
+
+.options:before {
+  content: '\2807';
+  font-size: 35px;
+  font-style: normal !important;
+  }
+
+a > .options {
+   color: #F8961E !important;
+   cursor: pointer;
+}
+
+a:hover {
+    color: #626262 !important;
+    text-decoration: none !important;
+}
+
+a:hover > options {
+    color: #626262 !important;
+}
+
+
+.appname {
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  display: inline;
+  overflow:hidden;
+  white-space: nowrap;
+}
+
+.appicon {
+
+}
+
+.gc {
+    /* height: 0px; */
+    /* display: none; */
+    position: relative;
+    /* top: 21px; */
+    text-align: center;
+    /* line-height: 30px; */
+    margin: 0px;
+    padding: 0px;
+    top: 3px;
+}
+
+/*@media (min-width: 1403px) {
+    .gc {
+        display: -webkit-inline-box;
+    }
+
+}
+
+@media (max-width: 990px) {
+    .gc {
+        display: -webkit-inline-box;
+    }
+
+}
+
+@media (max-width: 710px) {
+    .gc {
+        display: none;
+    }
+
+}*/
+
+
+.dropdown-menu {
+    left:10px !important;
+}
+
+.owner {
+  height: 30px;
+  line-height: 80px;
+  text-align: right;
+}
+
+.lastreload {
+  margin:0;
+}
+
+.cardaction {
+  margin: 5px;
+  width: 100%;
+}
+
+.space {
+  margin-top: 0px;
+}
+
+.previewlist {
+  list-style-type: circle !important;
+  margin-left: 20px !important;
+  font-size: 12px !important;
+}
+
+i.fa {
+  color: #636363;
+}
+
+.panel-body {
+  height: 250px;
+  background-repeat: no-repeat !important;
+  background-position-x: calc(100% + 40px) !important;
+  background-position-y: 160px !important;
+  background-size: 100px !important;
+  background-origin: content-box !important;
+}
+
+.bodyback {
+    padding: 0;
+}
+
+.description {
+    max-height: 120px !important;
+}
+
+.footerinfo {
+    display:inline !important;
+    margin-left: 5px;
+}
+
+.footerplaceholder {
+    height: 20px;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 3px solid #F8961E !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+}
+
+.panel-default > .panel-heading {
+    z-index: 1000;
+    position: relative;
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: none !important;
+}
+
+.m-btn {
+      width: 100%;
+    /*  background-image: none !important;
+      background-color: #FFF !important;*/
+}
+
+/* Flipper */
+.flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+}
+
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+    position: absolute;
+    top: 1px;
+    width: 100%;
+}
+
+.turncard {
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* Carousel */
+
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: 291px;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel {
+    height: 290px !important;
+    position: relative;
+    top: -40px;
+}
+.item {
+    background-color:transparent;
+}
+
+.carousel-inner {
+  border-radius: 15px;
+}
+
+.carousel-caption {
+ /* background-color: rgba(0,0,0,.5);*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 0 10px 0;
+  text-align: center;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+.charttitle {
+    padding-top:10px;
+    margin-bottom: 0;
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #636363;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    /* height: 10px; */
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #636363 \9 !important;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #636363 !important;
+    border-radius: 10px;
+}
+
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+    position: absolute;
+    top: calc(30px + 50%) !important;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+    text-shadow: 0 0 black;
+}
+
+/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+.section-white {
+   padding: 10px 0;
+}
+
+.section-white {
+  background-color: #fff;
+  color: #555;
+}
+
+@media screen and (min-width: 768px) {
+
+  .section-white {
+     padding: 1.5em 0;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .container {
+    max-width: 930px;
+  }
+
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    z-index: 500;
+}
+
+/* POPOVER Style */
+
+.popover-content {
+    height: 200px;
+    overflow-y: scroll;
+ }
+
+.shortlist > ul > li {
+    list-style-type: decimal;
+}
+
+.shortlist > ul {
+    padding-left:20px !important;
+    margin: 10px !important;
+}
+
+a {
+    color:#626262 !important;
+}
+
+.popover-title {
+    display:block !important;
+}
+
+.popover-content {
+    padding: 0px !important;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 102%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #626262; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+          -webkit-box-shadow: 0px 0 20px rgba(0,0,0,0.8);
+          box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.sidecontent {
+    text-align: center;
+    margin-left: 15px;
+    width: 250px;
+    height: 80px;
+    padding: 1px 25px;
+    color: #FFF;
+    border-bottom: 1px solid #DCDBDB;
+}
+
+.sidecontent p {
+    margin:5px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #DFDEDE !important;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #A9A9A4;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #DFDEDE;
+    margin: 7px 0;
+    transition: 0.6s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45eg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.containermenu {
+    cursor: pointer;
+    float: right;
+    right: -6%;
+    position: absolute;
+}
+
+/* RIBBON */
+.box {
+  width: 200px; height: 300px;
+  position: relative;
+  border: 1px solid #BBB;
+  background: #EEE;
+}
+.ribbon {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+  pointer-events: none 
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#54B143 0%, #54B143 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #54B143;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #54B143;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #54B143;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #54B143;
+}
+
+/* INTRO CLASS*/
+.intro-header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #595959;
+    z-index: 100;
+}
+
+.intro-navbar {
+    top:35px;
+}
+
+.intro-user {
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  margin: 5px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color:#FFF;
+  text-align: center;
+}
+
+.intro-glyphicon{
+   margin: 4px;
+   color: #9FA1A4;
+   font-size: 15px;
+}
+
+#username {
+    position: absolute;
+    left: 55px;
+    color: #FFF;
+
+    height: 50px;
+    line-height: 50px;
+    white-space: nowrap;
+}
+
+.intro-space {
+    position: absolute;
+    left: 35px;
+    height: 50px;
+    width: 0.5px;
+    border: 0.5px solid #FFF;
+    margin: 0px 10px;
+}
+
+.intro-maincontainer {
+    margin-top: 50px;
+}
+
+#progress-bar {
+    margin: 20px;
+
+}
+.progress-bar {
+    background-color: #636363 !important;
+}
+
+.progress {
+    height: 25px;
+    width: 100%;
+}
+.progress-info {
+    color: #000;
+    text-align: center;
+}
+
+/* Infopanel*/
+
+  .shape{    
+    border-style: solid; border-width: 0 70px 40px 0; float:right; height: 0px; width: 0px;
+    position: absolute;
+    right: 0px;
+    top: -1px;
+	-ms-transform:rotate(360deg); /* IE 9 */
+	-o-transform: rotate(360deg);  /* Opera 10.5 */
+	-webkit-transform:rotate(360deg); /* Safari and Chrome */
+	transform:rotate(360deg);
+}
+.offer{
+	background:#fff; overflow:hidden;
+}
+.shape {
+	border-color: rgba(255,255,255,0) #d9534f rgba(255,255,255,0) rgba(255,255,255,0);
+}
+.offer-radius{
+	border-radius:7px;
+}
+.offer-danger {	border-color: #d9534f; }
+.offer-danger .shape{
+	border-color: transparent #d9534f transparent transparent;
+}
+.offer-success {	border-color: #5cb85c; }
+.offer-success .shape{
+	border-color: transparent #5cb85c transparent transparent;
+}
+.offer-default {	border-color: #999999; }
+.offer-default .shape{
+	border-color: transparent #999999 transparent transparent;
+}
+.offer-primary {	border-color: #428bca; }
+.offer-primary .shape{
+	border-color: transparent #428bca transparent transparent;
+}
+.offer-info {	border-color: #ddd; }
+.offer-info .shape{
+	border-color: transparent #9FA1A4 transparent transparent;
+}
+.offer-warning {	border-color: #f0ad4e; }
+.offer-warning .shape{
+	border-color: transparent #ddd transparent transparent;
+}
+
+.shape-text{
+	color:#fff; font-size:12px; font-weight:bold; position:relative; right:-40px; top:2px; white-space: nowrap;
+	-ms-transform:rotate(30deg); /* IE 9 */
+	-o-transform: rotate(360deg);  /* Opera 10.5 */
+	-webkit-transform:rotate(30deg); /* Safari and Chrome */
+	transform:rotate(30deg);
+}	
+.offer-content{
+	padding:0 20px 10px;
+}
+@media (min-width: 487px) {
+  .container {
+    max-width: 750px;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    max-width: 970px;
+  }
+  .col-md-4 {
+    width: 33.33333333333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  }
+
+.modal-header {
+    background-color: #9FA1A4 !important;
+}
+
+.modal-footer {
+    background-color: #9FA1A4 !important;
+}
+
+/* Add the leonardo UI icon fonts */
+@font-face {
+	font-family: "LUI icons";
+    src: url(/resources/askq/fonts/lui-icons.woff) format('woff'),
+         url(/resources/askq/fonts/lui-icons.ttf) format('truetype');
+}
+
+.centered {
+    text-align: center;
+}
+
+
+.panel-body .collapse_trigger.collapse-symbol {
+    font-size: 15px;
+    color: #F8961E !important;
+    text-decoration: none !important;
+}
+
+.panel-body .collapse_trigger {
+    font-size: 15px;
+    color: #F8961E !important;
+    text-decoration: none !important;
+}
+
+.qlik-os-icon {
+    position: absolute;
+    width: 90px;
+    height: 82px;
+    top: 250px;
+    left: calc(100% - 90px);
+    z-index: 2000;
+}

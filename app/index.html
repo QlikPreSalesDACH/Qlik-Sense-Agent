@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<meta http-equiv="x-ua-compatible" content="IE=11">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Qlik Sense App Agent</title>
+    <link rel="shortcut icon" href="public/img/QSA-icon.ico">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="public/css/m-styles.min.css">
+    <link rel="stylesheet" href="app/sense-search-components/build/sense-search.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-toggle/css/bootstrap-toggle.min.css" />
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/socket.io-client/dist/socket.io.min.js"></script>
+	
+	
+    <script type="text/javascript" src="https://<hostname>/resources/assets/external/requirejs/require.js"></script>
+	    <!-- <script>
+        var proto = document.location.protocol;
+        var hosty = document.location.hostname;
+        var code = document.createElement("script");
+        code.src = proto + "//" + hosty + "/resources/assets/external/requirejs/require.js";
+        document.getElementsByTagName('head')[0].appendChild(code);
+    </script> -->
+    <style>
+        div.single-object #content {
+            height: 100%;
+            display: flex;
+            background-color: white;
+            padding: 10px 10px 10px 10px !important;
+            border-radius: 3px;
+            box-sizing: border-box;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+
+        <div class="intro-header">
+            <div class="container-fluid" style="padding-left:5%; padding-right: 5%;">
+                <div class="intro-user">
+                    <span class="glyphicon glyphicon-user intro-glyphicon" aria-hidden="true"></span>
+                </div>
+                <div class="intro-space"></div>
+                <div id="username">
+                    <div class="loader">Loading...</div>
+                </div>
+                <a href="javascript:void(0)" class="closebtn" onclick="toggleside(toggleobject)">&times;</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 sidecontent">
+                <p>Only select "<b>published</b>" Apps</p>
+                <input id="checkbox_published" type="checkbox" data-on="Enabled" data-off="Disabled" data-onstyle="success" data-width="200"
+                    data-toggle="toggle" />
+            </div>
+
+            <div class="col-xs-12 sidecontent">
+                <p>Only select "<b>certified</b>" Apps</p>
+                <input id="checkbox_certified" type="checkbox" data-on="Enabled" data-off="Disabled" data-onstyle="success" data-width="200"
+                    data-toggle="toggle" />
+            </div>
+        </div>
+    </div>
+
+    <div class="logo"><img src="public/img/QSA-logo-big-letters.png" /></div>
+    <img class="deco1" src="public/img/ConnectingCircles-05.png" />
+    <img class="deco2" src="public/img/ConnectingCircles-07.png" />
+    <section class="header effect6">
+
+        <div style="width: 80%; margin-left:calc(13% - 55px); margin-right: auto;">
+            <sense-search-input id="myInput" mode="simple"></sense-search-input>
+        </div>
+
+    </section>
+    <section class="main">
+        <div style="width: 80%; margin: 20px auto 0px auto;">
+            <sense-search-results id="myResults"></sense-search-results>
+        </div>
+    </section>
+
+    <div id="progressMondal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div id="welcome" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" style="color:#FFF; opacity: 1;" data-dismiss="modal" onClick="javascript: window.location.reload()">&times;</button>
+                        <h4 class="modal-title" style="color:#FFF">Self-Service Process Monitor</h4>
+                    </div>
+                    <div class="modal-body" style="padding: 0px;">
+                        <div class="offer offer-info">
+                            <div class="shape">
+                                <div class="shape-text">
+                                    <span class="glyphicon glyphicon glyphicon-info-sign"></span>
+                                </div>
+                            </div>
+                            <div id="explanation4">
+                                <div class="offer-content">
+                                    <h3>Application under deployment.</h3>
+                                    <p>The selected application get's deployed to <b>Sandbox-Environment</b>. After the deployment
+                                        has finished you can jump directly to you app using the <b>Open Application</b> button.
+                                        The <b>Open Data Prep</b> button will guide you to the <b>Data-Preparation-Wizard</b>                                        of the deployed app.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="progress-bar">
+                            <div class="progress" value="1" max="100">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                    style="width:1%">
+                                    1%
+                                </div>
+                            </div>
+                            <div class="progress-info">init</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" onClick="javascript:window.location.reload()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="app/sense-search-components/build/sense-search.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="public/js/m-dropdown.min.js"></script>
+    <script type="text/javascript" src="public/js/m-radio.min.js"></script>
+    <script type="text/javascript" src="app/QSA.js"></script>
+</body>
+</html>

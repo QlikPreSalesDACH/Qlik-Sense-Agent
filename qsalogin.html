@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+    <script>
+        // ******Replace the url in the goto variable with the url to the html file to render.******
+        function existsRedirect(url, field) {
+            if (url.indexOf('?' + field + '=') != -1)
+                return true;
+            else if (url.indexOf('&' + field + '=') != -1)
+                return true;
+            return false
+        }
+
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+
+        var fullUrl = window.location.href;
+        if (existsRedirect(fullUrl, "redirectUrl")) {
+            var destination = getParameterByName("redirectUrl");
+            window.open(destination, '_self');
+        } else {
+            var indexEndBaseUrl = fullUrl.indexOf("/content/");
+            var resourceBaseUrl = indexEndBaseUrl > 0 ? fullUrl.substr(0, indexEndBaseUrl) : fullUrl;
+            if (resourceBaseUrl.slice(-1) === '/') {
+                resourceBaseUrl = resourceBaseUrl.slice(0, resourceBaseUrl.length - 1);
+            }
+
+            var pos = resourceBaseUrl.indexOf('/', 9);
+            var proxyPath = pos > -1 ? resourceBaseUrl.substr(pos) : '';
+
+            var protocol = window.location.href.split("//");
+            var destination = protocol[0] + "//" + window.location.hostname + ":8589" + proxyPath + "/qsa/";
+            window.open(destination, '_self');
+
+        }
+    </script>
+</body>
+
+</html>
