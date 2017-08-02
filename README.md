@@ -48,17 +48,22 @@ Local copys of corporate data create huge compliance issue
  - Self Service Apps are connected to governed content a could benefit from automatic data refreshes
  
 ----------
+
 "Look and Feel":
 ![QSA](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Sense-Agent/master/docs/img/1.png)
 
 ----------
+
 Searchresults:
 ![QSA](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Sense-Agent/master/docs/img/4.png)
+
 ----------
+
 Starting Self-Servoce Process:
 ![QSA](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Sense-Agent/master/docs/img/3.png)
 
 ----------
+
 Self-Service Workflow:
 ![QSA](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Sense-Agent/master/docs/img/5.png)
 
