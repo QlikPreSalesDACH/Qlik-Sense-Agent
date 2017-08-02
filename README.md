@@ -58,7 +58,7 @@ The documentation for Qlik Data Concierge will be maintained through the interna
 ----------
 
 #### **Implementation**
- **I like to implement the solution in a production environment. Where can I get assistance from?**
+ *I like to implement the solution in a production environment. Where can I get assistance from?*
  
  *Please contact Qlik Consulting Services to gain help in your project.*
  
