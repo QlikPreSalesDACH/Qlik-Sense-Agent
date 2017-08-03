@@ -2143,7 +2143,7 @@ var SenseSearchResult = (function(){
                             html += "<div class='col-xs-1'><h4 class='appicon'><a class='dropdown-toggle' data-toggle='dropdown'><i class='options' aria-hidden='true'></i></a>";
                             html += "<ul class='dropdown-menu' role='menu'>"
                             html += "<li><a href='" + config.url + newItems[i]['[ID-App_ID]'].html + "' target='_blank'>View App</a></li>";
-                            html += "<li><a href='http://activate.qliktech.com/activate/default.aspx' target='_blank'>Request Access</a></li>";
+                            html += "<li><a href='http://www.google.com' target='_blank'>Request Access</a></li>";
 
                             var vSelfservice = vTags.indexOf("SelfService");
 
