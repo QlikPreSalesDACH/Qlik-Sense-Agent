@@ -3,7 +3,7 @@ Version: 1.0.0
 
 #### **Qlik Sense Agent in action**
 
-Placeholder
+[![QSA](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Sense-Agent/master/docs/img/20.png)](https://youtu.be/7dPuX8myito)
 
 #### **What is it?**
 The Qlik Sense Agent is a solution that helps you to enforce Governance for your entire Qlik landscape and to enable Governed Self Service
@@ -58,7 +58,7 @@ The documentation for Qlik Data Concierge will be maintained through the interna
 ----------
 
 #### **Implementation**
- *I like to implement the solution in a production environment. Where can I get assistance from?*
+ **I like to implement the solution in a production environment. Where can I get assistance from?**
  
  *Please contact Qlik Consulting Services to gain help in your project.*
  
