@@ -8,7 +8,7 @@
       "isSecure": "https://",
       "port": "443",
       "prefix": "/",
-	  "url": "https://servername/sense/app/"
+      "url": "https://servername/sense/app/"
     },
     "gms": {
       "usage": "true",
