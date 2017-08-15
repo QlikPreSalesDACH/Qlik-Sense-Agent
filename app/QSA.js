@@ -16,7 +16,8 @@ $.ajax({
             host: content.config.source.host,
             prefix: content.config.source.prefix,
             port: content.config.source.port,
-            isSecure: content.config.source.isSecure
+            isSecure: content.config.source.isSecure,
+			url: content.config.source.url
         };
         appid = content.config.general.appid;
         return;
