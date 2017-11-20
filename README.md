@@ -1,6 +1,6 @@
 # Qlik-Sense-Agent
-Version: 1.0.1
-
+Version: 1.0.2
+  -  A new Meta Application has been added to the repository to support Qlik Sense November 2017
 #### **Qlik Sense Agent in action**
 
 [![QSA](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Sense-Agent/master/docs/img/20.png)](https://youtu.be/7dPuX8myito)
