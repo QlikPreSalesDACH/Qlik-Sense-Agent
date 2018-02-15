@@ -5,7 +5,14 @@ var express = require('express');
 var fs = require('fs');
 var qrsInteract = require('qrs-interact');
 var router = express.Router();
-const qsocks = require('qsocks');
+const bluebird = require('bluebird');
+
+
+const enigma = require('enigma.js');
+const schema = require('enigma.js/schemas/12.20.0.json');
+const WebSocket = require('ws');
+
+
 var request = require('request');
 var socketHelper = require("./lib/socketHelper");
 
@@ -46,28 +53,30 @@ router.route("/createApp")
 		var cpvalue = req.body.cp;
 		console.log(user);
 		console.log(sourceapp);
-		const client = fs.readFileSync('certs/' + config.sandbox.hostname + '/client.pem');
-		const client_key = fs.readFileSync('certs/' + config.sandbox.hostname + '/client_key.pem');
-		const target = {
-			host: config.sandbox.hostname,
-			port: 4747,
-			isSecure: true,
-			headers: {
-				'X-Qlik-User': 'UserDirectory=' + user.userdirectory + ';UserId=' + user.userid
-			},
-			key: client_key,
-			cert: client,
-			rejectUnauthorized: false,
-			prefix: config.sandbox.prefix
-		};
 
 		var vNamespace = sourceapp.name + '_' + user.userid;
 		var vApp;
 		vApp = vNamespace + '_' + timeStamp();
 		var vAppID;
+		const client = fs.readFileSync('certs/' + config.sandbox.hostname + '/client.pem');
+		const client_key = fs.readFileSync('certs/' + config.sandbox.hostname + '/client_key.pem');
 
-		socketHelper.sendMessageRoom('qsa', { percent: 1, msg: 'connecting to server' }, user.userid);
-		qsocks.Connect(target).then(global => {
+		const session = enigma.create({
+			schema,
+			url: 'wss://' + config.sandbox.hostname + ':4747' + config.sandbox.prefix + 'app/engineData',
+			createSocket: url => new WebSocket(url, {
+			  key: client_key,
+			  cert: client,
+			  headers: {
+				'X-Qlik-User': 'UserDirectory=' + user.userdirectory + ';UserId=' + user.userid,
+			  },
+			  rejectUnauthorized: false,
+			}),
+		  });
+
+		  socketHelper.sendMessageRoom('qsa', { percent: 1, msg: 'connecting to server' }, user.userid);
+		  session.open().then((global) => {
+
 			console.log('createApp');
 			socketHelper.sendMessageRoom('qsa', { percent: 10, msg: 'app gets created' }, user.userid);
 			return global.createApp(vApp)
@@ -138,7 +147,7 @@ router.route("/createApp")
 						})
 				})
 				.then(() => {
-					return global.connection.close();
+					return session.close().then(() => console.log('Session was properly closed'));
 				})
 				.catch(err => {
 					console.log(err)
@@ -149,8 +158,7 @@ router.route("/createApp")
 				var vHUBURL = (config.sandbox.isSecure ? "https://" : "http://") + config.sandbox.hostname + (config.sandbox.port ? ":" + config.sandbox.port : "") + config.sandbox.prefix + 'sense/app/' + vAppID + "/";
 				socketHelper.sendMessageRoom('qsa', { percent: 100, msg: 'app has been deployed successfully' }, user.userid);
 				socketHelper.sendMessageRoom('qsa', { percent: 101, msg: vHUBURL }, user.userid);
-			})
-	
+			})	
 			res.status(200).send("I'm building stuff");
 		})
 

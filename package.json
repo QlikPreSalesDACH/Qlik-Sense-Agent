@@ -1,10 +1,9 @@
 {
   "name": "qsa-node",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Qlik Sense Agent is a solution that helps you to enforce Governance for your entire Qlik landscape and to enable Governed Self Service",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [
@@ -21,6 +20,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-toggle": "^2.2.2",
     "cookie-parser": "^1.4.3",
+    "enigma.js": "^2.2.0",
     "express": "^4.15.3",
     "extend": "^3.0.1",
     "font-awesome": "^4.7.0",
@@ -30,11 +30,11 @@
     "normalize.css": "^7.0.0",
     "path": "^0.12.7",
     "qrs-interact": "^2.5.7",
-    "qsocks": "^3.2.1",
     "request": "^2.81.0",
     "socket.io": "^1.7.3",
     "socket.io-client": "^1.7.3",
     "winston": "^2.3.1",
-    "winston-daily-rotate-file": "^1.4.6"
+    "winston-daily-rotate-file": "^1.4.6",
+    "ws": "^4.0.0"
   }
 }

@@ -97,6 +97,7 @@ $.ajax({
             }, function (fields) {
                 $('#amountApps').text('');
                 $('#amountApps').text(fields.TYPE);
+                
                 //console.log(fields.SELECTED);
                 if (fields.SELECTED = 0) {
                     $('#myResults_results').hide();
@@ -162,7 +163,7 @@ $.ajax({
                         "order": -1
                     },
                     {
-                        "measure": "=if( substringcount(aggr(concat({<[Dimension]=>}[Dimension],','),[ID-App_ID]),',')>= 1, substringcount(aggr(concat({<[Dimension]=>}[Dimension],','),[ID-App_ID]),',')+1,0)",
+                        "measure": "=if( len(aggr(concat({<[Dimension]=>}[Dimension],','),[ID-App_ID]))>= 1, substringcount(aggr(concat({<[Dimension]=>}[Dimension],','),[ID-App_ID]),',')+1,0)",
                         "label": "DIMCOUNT",
                         "sortType": "qSortByNumeric",
                         "order": -1
@@ -174,7 +175,7 @@ $.ajax({
                         "order": -1
                     },
                     {
-                        "measure": "=if( substringcount(aggr(concat({<[Measure]=>}[Measure],','),[ID-App_ID]),',')>= 1, substringcount(aggr(concat({<[Measure]=>}[Measure],','),[ID-App_ID]),',')+1,0)",
+                        "measure": "=if( len(aggr(concat({<[Measure]=>}[Measure],','),[ID-App_ID]))>= 1, substringcount(aggr(concat({<[Measure]=>}[Measure],','),[ID-App_ID]),',')+1,0)",
                         "label": "MESCOUNT",
                         "sortType": "qSortByNumeric",
                         "order": -1
