@@ -1,6 +1,6 @@
 # Qlik-Sense-Agent
 Version: 1.1.0
-  -  Switched communication from with Engine API from qsocks to enigmajs
+  -  Switched communication with Engine API from qsocks to enigmajs
   -  Some small design fixes
 
 
