@@ -225,7 +225,7 @@ $.ajax({
             $("body").delegate('.SelfService', 'click', function () {
                 var vsourceappid = $(this).attr('appid'); //AppID from Source App   
                 var vcustomproperty = $(this).attr('customproperty'); //CustomProperty from Source App
-                $('#progressMondal').modal('show');
+                jQuery('#progressMondal').modal('show');
                 app.createGenericObject({
                     TYPE: {
                         qStringExpression: "=concat({<[ID-App_ID] = {'" + vsourceappid + "'}>}distinct [App Name])"
